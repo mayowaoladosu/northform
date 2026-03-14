@@ -5,11 +5,26 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const navItems = [
-  "About Us",
-  "Ventures",
-  "Thinking",
-  "Work With Us",
-  "Contact",
+  {
+    label: "About Us",
+    href: "https://www.notion.so/2f940d2ef66d807ea0d1d1197dcc5190",
+  },
+  {
+    label: "Ventures",
+    href: "https://www.notion.so/32340d2ef66d8054a483cb628ac8de99",
+  },
+  {
+    label: "Thinking",
+    href: "https://www.notion.so/32340d2ef66d80c5af52fe40c8c8ba90",
+  },
+  {
+    label: "Work with us",
+    href: "https://www.notion.so/32340d2ef66d80959d79c224a1b28bfa",
+  },
+  {
+    label: "Contact",
+    href: "https://www.notion.so/32340d2ef66d809b99aed3fc5c46facb",
+  },
 ];
 
 export default function Home() {
@@ -68,11 +83,13 @@ export default function Home() {
           <nav className="hidden min-[1280px]:flex min-[1280px]:h-[1.6875rem] min-[1280px]:items-center min-[1280px]:gap-[2.6875rem] min-[1280px]:text-[1.375rem] min-[1280px]:font-medium min-[1280px]:leading-[1.6875rem] min-[1280px]:tracking-normal min-[1280px]:text-ink">
             {navItems.map((item) => (
               <a
-                key={item}
-                href="#"
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
                 className="whitespace-nowrap transition-opacity duration-200 hover:opacity-60"
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </nav>
@@ -129,12 +146,14 @@ export default function Home() {
         <nav className="mt-10 flex flex-col border-t border-black/8 min-[744px]:mt-12">
           {navItems.map((item) => (
             <a
-              key={item}
-              href="#"
+              key={item.label}
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
               onClick={() => setIsMenuOpen(false)}
               className="border-b border-black/8 py-4 text-[1rem] font-normal leading-none text-ink transition-opacity duration-200 hover:opacity-60"
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </nav>
