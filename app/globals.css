@@ -2,16 +2,17 @@
 
 :root {
   --page-background: #ffffff;
-  --panel-background: #f7f7f6;
-  --ink: #080808;
+  --panel-background: #f4f4f4;
+  --ink: #000000;
+  --font-times: "Times New Roman", Times, serif;
 }
 
 @theme inline {
   --color-page-background: var(--page-background);
   --color-panel-background: var(--panel-background);
   --color-ink: var(--ink);
-  --font-sans: var(--font-manrope);
-  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-times);
 }
 
 * {
@@ -26,7 +27,7 @@ body {
   margin: 0;
   background: var(--page-background);
   color: var(--ink);
-  font-family: var(--font-manrope), sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
 }
 
 a {
