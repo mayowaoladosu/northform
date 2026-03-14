@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --page-background: #ffffff;
+  --panel-background: #f7f7f6;
+  --ink: #080808;
+}
+
+@theme inline {
+  --color-page-background: var(--page-background);
+  --color-panel-background: var(--panel-background);
+  --color-ink: var(--ink);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-cormorant);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page-background);
+}
+
+body {
+  margin: 0;
+  background: var(--page-background);
+  color: var(--ink);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
